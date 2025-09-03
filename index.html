@@ -1,0 +1,2466 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_429ed307de305a4bd1b6fe30df2934ee {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_429ed307de305a4bd1b6fe30df2934ee" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_429ed307de305a4bd1b6fe30df2934ee = L.map(
+                "map_429ed307de305a4bd1b6fe30df2934ee",
+                {
+                    center: [46.212969912293566, 6.0981058031376145],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_15b4ad52b81b1e493e80d9420bb5ca5e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_15b4ad52b81b1e493e80d9420bb5ca5e.addTo(map_429ed307de305a4bd1b6fe30df2934ee);
+        
+    
+            var feature_group_2b259a58ca7a44a644d2af0dded52bff = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_13f52398851af6f8c862841d2c98ff7b = L.marker(
+                [46.20237677, 6.104626994],
+                {
+}
+            ).addTo(feature_group_2b259a58ca7a44a644d2af0dded52bff);
+        
+    
+            var div_icon_3f13cdf5c1a2de4a55b31e2e72638098 = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eA\u00efre - Pont-Butin\u003c/b\u003e\u003cbr\u003e19-25 : 159\u003cbr\u003e16-18 : 67\u003cbr\u003e13-15 : 52\u003cbr\u003e9-12 : 80\u003cbr\u003e5-8 : 44\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_13f52398851af6f8c862841d2c98ff7b.setIcon(div_icon_3f13cdf5c1a2de4a55b31e2e72638098);
+            
+    
+            var feature_group_cccb5e55df940191d0c04247151d3d1e = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_9e0fedc31c0b3246dca9f6f21a1b7248 = L.marker(
+                [46.19710129, 6.097452479],
+                {
+}
+            ).addTo(feature_group_cccb5e55df940191d0c04247151d3d1e);
+        
+    
+            var div_icon_5996930e81a47cd7f2543283c0ab148a = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eA\u00efre-Renard\u003c/b\u003e\u003cbr\u003e19-25 : 112\u003cbr\u003e16-18 : 46\u003cbr\u003e13-15 : 46\u003cbr\u003e9-12 : 52\u003cbr\u003e5-8 : 34\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_9e0fedc31c0b3246dca9f6f21a1b7248.setIcon(div_icon_5996930e81a47cd7f2543283c0ab148a);
+            
+    
+            var feature_group_326b4abad0f55e514c7c6b8e10c68d58 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_eb9c6e62875ecf377099d171127d2dc5 = L.marker(
+                [46.2167463, 6.114123178],
+                {
+}
+            ).addTo(feature_group_326b4abad0f55e514c7c6b8e10c68d58);
+        
+    
+            var div_icon_1529387ba8b07a8bbd797d3a7e99fd28 = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eBalexert - Crozet\u003c/b\u003e\u003cbr\u003e16-18 : 86\u003cbr\u003e13-15 : 88\u003cbr\u003e19-25 : 153\u003cbr\u003e9-12 : 99\u003cbr\u003e5-8 : 82\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_eb9c6e62875ecf377099d171127d2dc5.setIcon(div_icon_1529387ba8b07a8bbd797d3a7e99fd28);
+            
+    
+            var feature_group_992217421a0f8cdf40248a0b57d88cf8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_4c6958d5854a62b53b3d811579753f7d = L.marker(
+                [46.21829025, 6.114125259],
+                {
+}
+            ).addTo(feature_group_992217421a0f8cdf40248a0b57d88cf8);
+        
+    
+            var div_icon_958911049b5a3a89ce36dc97c3552a5d = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eBalexert - centre\u003c/b\u003e\u003cbr\u003e19-25 : 32\u003cbr\u003e16-18 : 10\u003cbr\u003e13-15 : 11\u003cbr\u003e5-8 : 11\u003cbr\u003e9-12 : 18\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_4c6958d5854a62b53b3d811579753f7d.setIcon(div_icon_958911049b5a3a89ce36dc97c3552a5d);
+            
+    
+            var feature_group_83f7eeb7c2092e523ca7c33d98bb2972 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_f75b2acedc4c33b0b64d280587a99923 = L.marker(
+                [46.22049005, 6.090068913],
+                {
+}
+            ).addTo(feature_group_83f7eeb7c2092e523ca7c33d98bb2972);
+        
+    
+            var div_icon_66a1b0e1da30f5d8148a936ed4e3e08e = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eBel-Ebat\u003c/b\u003e\u003cbr\u003e19-25 : 79\u003cbr\u003e16-18 : 26\u003cbr\u003e13-15 : 27\u003cbr\u003e9-12 : 29\u003cbr\u003e5-8 : 29\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_f75b2acedc4c33b0b64d280587a99923.setIcon(div_icon_66a1b0e1da30f5d8148a936ed4e3e08e);
+            
+    
+            var feature_group_a7222dfeb8fbfce72d145af5dc200516 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_2efcf0ec8bfbd76f5f1e032e032b85dc = L.marker(
+                [46.21318124, 6.096206956],
+                {
+}
+            ).addTo(feature_group_a7222dfeb8fbfce72d145af5dc200516);
+        
+    
+            var div_icon_f6abfceab3fcebce9da7fe4ab7c7d997 = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eBois-des-Fr\u00e8res\u003c/b\u003e\u003cbr\u003e19-25 : 138\u003cbr\u003e13-15 : 41\u003cbr\u003e16-18 : 58\u003cbr\u003e9-12 : 51\u003cbr\u003e5-8 : 47\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_2efcf0ec8bfbd76f5f1e032e032b85dc.setIcon(div_icon_f6abfceab3fcebce9da7fe4ab7c7d997);
+            
+    
+            var feature_group_09559599d593c19738c44f6560074cfc = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_c3dbccfbd8eee7f1107d872a5d5fbb19 = L.marker(
+                [46.2222646, 6.091879364],
+                {
+}
+            ).addTo(feature_group_09559599d593c19738c44f6560074cfc);
+        
+    
+            var div_icon_f264105189f3a3b06a0d975bd8f3c48c = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eChamps-Pr\u00e9vost\u003c/b\u003e\u003cbr\u003e19-25 : 42\u003cbr\u003e13-15 : 19\u003cbr\u003e16-18 : 13\u003cbr\u003e9-12 : 19\u003cbr\u003e5-8 : 24\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_c3dbccfbd8eee7f1107d872a5d5fbb19.setIcon(div_icon_f264105189f3a3b06a0d975bd8f3c48c);
+            
+    
+            var feature_group_5c81e6da4d17f3b46313359e17f511a3 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_b42800fa0ec73cdaccf51b8cd0009e88 = L.marker(
+                [46.20885393, 6.110735398],
+                {
+}
+            ).addTo(feature_group_5c81e6da4d17f3b46313359e17f511a3);
+        
+    
+            var div_icon_0a3f2602f84aadb5005f80eaa413a3cc = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eCh\u00e2telaine - Simonet\u003c/b\u003e\u003cbr\u003e19-25 : 141\u003cbr\u003e16-18 : 77\u003cbr\u003e13-15 : 73\u003cbr\u003e9-12 : 106\u003cbr\u003e5-8 : 100\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_b42800fa0ec73cdaccf51b8cd0009e88.setIcon(div_icon_0a3f2602f84aadb5005f80eaa413a3cc);
+            
+    
+            var feature_group_ce362906185fed25f80662d113562ec9 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_a23f775050a5137d8b6e58ba74b662d0 = L.marker(
+                [46.21339667, 6.113273538],
+                {
+}
+            ).addTo(feature_group_ce362906185fed25f80662d113562ec9);
+        
+    
+            var div_icon_439cabebb4d7bfd525add73107407753 = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eCh\u00e2telaine - village\u003c/b\u003e\u003cbr\u003e16-18 : 110\u003cbr\u003e19-25 : 283\u003cbr\u003e9-12 : 128\u003cbr\u003e13-15 : 100\u003cbr\u003e5-8 : 134\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_a23f775050a5137d8b6e58ba74b662d0.setIcon(div_icon_439cabebb4d7bfd525add73107407753);
+            
+    
+            var feature_group_821d82ec588da134c7a407caee0273d9 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_64e440e89bc659b2a489755e8b5f0d95 = L.marker(
+                [46.21489142, 6.108556263],
+                {
+}
+            ).addTo(feature_group_821d82ec588da134c7a407caee0273d9);
+        
+    
+            var div_icon_817824066d63f916dc56454051959b4a = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eEtang - Philibert -de-Sauvage\u003c/b\u003e\u003cbr\u003e19-25 : 19\u003cbr\u003e16-18 : 15\u003cbr\u003e13-15 : 7\u003cbr\u003e9-12 : 16\u003cbr\u003e5-8 : 11\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_64e440e89bc659b2a489755e8b5f0d95.setIcon(div_icon_817824066d63f916dc56454051959b4a);
+            
+    
+            var feature_group_df4110c714488bcf76c06fa4f9c4b252 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_0f44a4b9b2659e0f7490db2f7cf90aa2 = L.marker(
+                [46.21826584, 6.10465959],
+                {
+}
+            ).addTo(feature_group_df4110c714488bcf76c06fa4f9c4b252);
+        
+    
+            var div_icon_c2a29ae6e652852682b68109b90e4500 = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eEtang-des-Tritons\u003c/b\u003e\u003cbr\u003e16-18 : 76\u003cbr\u003e19-25 : 255\u003cbr\u003e13-15 : 84\u003cbr\u003e9-12 : 123\u003cbr\u003e5-8 : 176\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_0f44a4b9b2659e0f7490db2f7cf90aa2.setIcon(div_icon_c2a29ae6e652852682b68109b90e4500);
+            
+    
+            var feature_group_38fad1a579eae4e7861e6b14d38caca8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_512f08e393ddabfbb1c6f172b4b2184b = L.marker(
+                [46.20522305, 6.078490212],
+                {
+}
+            ).addTo(feature_group_38fad1a579eae4e7861e6b14d38caca8);
+        
+    
+            var div_icon_ee1800b1e9fe85c4fd7f2ebb50542086 = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eLe Canada\u003c/b\u003e\u003cbr\u003e19-25 : 10\u003cbr\u003e16-18 : 10\u003cbr\u003e13-15 : 1\u003cbr\u003e9-12 : 5\u003cbr\u003e5-8 : 4\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_512f08e393ddabfbb1c6f172b4b2184b.setIcon(div_icon_ee1800b1e9fe85c4fd7f2ebb50542086);
+            
+    
+            var feature_group_a35c5fb42371671d70d8736fa05d6c07 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_e40184ebd0535792ba550402d4c16745 = L.marker(
+                [46.20438331, 6.094754085],
+                {
+}
+            ).addTo(feature_group_a35c5fb42371671d70d8736fa05d6c07);
+        
+    
+            var div_icon_83722984cc12993ad8f4c93473b0fed2 = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eLe Lignon\u003c/b\u003e\u003cbr\u003e19-25 : 476\u003cbr\u003e13-15 : 190\u003cbr\u003e16-18 : 200\u003cbr\u003e9-12 : 249\u003cbr\u003e5-8 : 204\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_e40184ebd0535792ba550402d4c16745.setIcon(div_icon_83722984cc12993ad8f4c93473b0fed2);
+            
+    
+            var feature_group_cc69c477ea0d834d543e3bed597d7fcf = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_4cbabeeb0a489f1cf1ad7bcfb031cea7 = L.marker(
+                [46.22070609, 6.108870466],
+                {
+}
+            ).addTo(feature_group_cc69c477ea0d834d543e3bed597d7fcf);
+        
+    
+            var div_icon_83d49efc961cf38e8b305b3f0df77017 = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eLes Avanchets\u003c/b\u003e\u003cbr\u003e16-18 : 155\u003cbr\u003e19-25 : 448\u003cbr\u003e13-15 : 181\u003cbr\u003e9-12 : 246\u003cbr\u003e5-8 : 188\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_4cbabeeb0a489f1cf1ad7bcfb031cea7.setIcon(div_icon_83d49efc961cf38e8b305b3f0df77017);
+            
+    
+            var feature_group_7077090168909bf7a95cde460518e1d1 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_8fb9809e50d892502be233fcc4f814bc = L.marker(
+                [46.20849878, 6.076631038],
+                {
+}
+            ).addTo(feature_group_7077090168909bf7a95cde460518e1d1);
+        
+    
+            var div_icon_75a37f0eee782ff0557913dbddb85e37 = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eLes Vidollets\u003c/b\u003e\u003cbr\u003e16-18 : 103\u003cbr\u003e19-25 : 224\u003cbr\u003e13-15 : 73\u003cbr\u003e9-12 : 113\u003cbr\u003e5-8 : 92\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_8fb9809e50d892502be233fcc4f814bc.setIcon(div_icon_75a37f0eee782ff0557913dbddb85e37);
+            
+    
+            var feature_group_77a859d3fa44dbbe598a369179d1f063 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_674b602f53e718f9bcaa1f18ed365677 = L.marker(
+                [46.20891684, 6.107441983],
+                {
+}
+            ).addTo(feature_group_77a859d3fa44dbbe598a369179d1f063);
+        
+    
+            var div_icon_c2c5d8a80fc9acef7ca030b4bd8f799c = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eLibellules\u003c/b\u003e\u003cbr\u003e16-18 : 94\u003cbr\u003e19-25 : 201\u003cbr\u003e13-15 : 103\u003cbr\u003e9-12 : 119\u003cbr\u003e5-8 : 103\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_674b602f53e718f9bcaa1f18ed365677.setIcon(div_icon_c2c5d8a80fc9acef7ca030b4bd8f799c);
+            
+    
+            var feature_group_78d88fc741ae3f225772ccb7da6a817e = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_a522b424f21b467866807376d299e05d = L.marker(
+                [46.218801, 6.078810696],
+                {
+}
+            ).addTo(feature_group_78d88fc741ae3f225772ccb7da6a817e);
+        
+    
+            var div_icon_13b68c57e0cf9d6bf2c1b082ab9b72e2 = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eMouille-Galand\u003c/b\u003e\u003cbr\u003e13-15 : 40\u003cbr\u003e9-12 : 41\u003cbr\u003e19-25 : 68\u003cbr\u003e16-18 : 27\u003cbr\u003e5-8 : 28\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_a522b424f21b467866807376d299e05d.setIcon(div_icon_13b68c57e0cf9d6bf2c1b082ab9b72e2);
+            
+    
+            var feature_group_a8e743dc629aa80cb57396df204ca2b8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_34c0d5df3ddff6b3d4b88811a821a91e = L.marker(
+                [46.21729075, 6.089334752],
+                {
+}
+            ).addTo(feature_group_a8e743dc629aa80cb57396df204ca2b8);
+        
+    
+            var div_icon_0f9f89cbef8e4cd34df2834a21d4663c = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003ePoussy - Champ-Claude\u003c/b\u003e\u003cbr\u003e19-25 : 135\u003cbr\u003e13-15 : 70\u003cbr\u003e16-18 : 78\u003cbr\u003e9-12 : 75\u003cbr\u003e5-8 : 54\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_34c0d5df3ddff6b3d4b88811a821a91e.setIcon(div_icon_0f9f89cbef8e4cd34df2834a21d4663c);
+            
+    
+            var feature_group_12c089d5f49c93416ca00cfc0f054e9d = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_5959041afbf2d049fafd1e1f7576068b = L.marker(
+                [46.21370239, 6.075717807],
+                {
+}
+            ).addTo(feature_group_12c089d5f49c93416ca00cfc0f054e9d);
+        
+    
+            var div_icon_b33e782860bd77a00b922dc9614632eb = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eRte de Peney - Crotte-au-Loup\u003c/b\u003e\u003cbr\u003e19-25 : 70\u003cbr\u003e13-15 : 29\u003cbr\u003e16-18 : 29\u003cbr\u003e9-12 : 36\u003cbr\u003e5-8 : 39\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_5959041afbf2d049fafd1e1f7576068b.setIcon(div_icon_b33e782860bd77a00b922dc9614632eb);
+            
+    
+            var feature_group_69e4536cb3732e10239c55ff61de47ee = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_14ae7529dfbd1e9804b83dab1160d82e = L.marker(
+                [46.20696143, 6.102075047],
+                {
+}
+            ).addTo(feature_group_69e4536cb3732e10239c55ff61de47ee);
+        
+    
+            var div_icon_e80f1bfb70491bc0926dc4523c785c1a = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eUsine \u00e0 Gaz\u003c/b\u003e\u003cbr\u003e19-25 : 73\u003cbr\u003e16-18 : 43\u003cbr\u003e13-15 : 59\u003cbr\u003e9-12 : 63\u003cbr\u003e5-8 : 44\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_14ae7529dfbd1e9804b83dab1160d82e.setIcon(div_icon_e80f1bfb70491bc0926dc4523c785c1a);
+            
+    
+            var feature_group_824d295800600a64c0e38e44083f219c = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_a1b3861f1da8c61121805a4ac49a8c10 = L.marker(
+                [46.22243772, 6.113217008],
+                {
+}
+            ).addTo(feature_group_824d295800600a64c0e38e44083f219c);
+        
+    
+            var div_icon_03b8479ec830bb40fcb47bdaa72c271f = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eVernier - Cointrin\u003c/b\u003e\u003cbr\u003e13-15 : 36\u003cbr\u003e19-25 : 82\u003cbr\u003e16-18 : 33\u003cbr\u003e9-12 : 31\u003cbr\u003e5-8 : 22\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_a1b3861f1da8c61121805a4ac49a8c10.setIcon(div_icon_03b8479ec830bb40fcb47bdaa72c271f);
+            
+    
+            var feature_group_2e19623c45e79f1dc99fd8a55f07396a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_98a7e7dd2089f6435f6e079543b5bc68 = L.marker(
+                [46.21245546, 6.084569353],
+                {
+}
+            ).addTo(feature_group_2e19623c45e79f1dc99fd8a55f07396a);
+        
+    
+            var div_icon_5edc0de0bd7bfdb89630a7ab8e47b157 = L.divIcon({
+  "html": "\n                \u003cdiv style=\u0027\n                    background-color: white;\n                    border: 1px solid gray;\n                    border-radius: 6px;\n                    padding: 4px;\n                    font-size: 10px;\n                    line-height: 1.2;\n                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);\n                \u0027\u003e\n                    \u003cb\u003eVernier - village\u003c/b\u003e\u003cbr\u003e16-18 : 1\u003cbr\u003e19-25 : 10\u003cbr\u003e9-12 : 5\u003cbr\u003e5-8 : 4\u003cbr\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [120, 40],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_98a7e7dd2089f6435f6e079543b5bc68.setIcon(div_icon_5edc0de0bd7bfdb89630a7ab8e47b157);
+            
+    
+            var feature_group_4beee8dec07b0d95883ec03fe4d33266 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_25ce3a74ab488335b58861f92a1ffe61 = L.marker(
+                [46.20593137, 6.106562377],
+                {
+}
+            ).addTo(feature_group_4beee8dec07b0d95883ec03fe4d33266);
+        
+    
+            var icon_095a5166650d1439331e3441dcc6b32a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_87066f2e182db7df398c5d3ee674457a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bbf47f2bbbdd37ea42a4d08bdcfae738 = $(`<div id="html_bbf47f2bbbdd37ea42a4d08bdcfae738" style="width: 100.0%; height: 100.0%;">MQ de Libellues</div>`)[0];
+                popup_87066f2e182db7df398c5d3ee674457a.setContent(html_bbf47f2bbbdd37ea42a4d08bdcfae738);
+            
+        
+
+        marker_25ce3a74ab488335b58861f92a1ffe61.bindPopup(popup_87066f2e182db7df398c5d3ee674457a)
+        ;
+
+        
+    
+    
+            marker_25ce3a74ab488335b58861f92a1ffe61.bindTooltip(
+                `<div>
+                     MQ de Libellues
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_25ce3a74ab488335b58861f92a1ffe61.setIcon(icon_095a5166650d1439331e3441dcc6b32a);
+            
+    
+            var marker_c56161952cbe3457be2c6a6c88849024 = L.marker(
+                [46.20443515, 6.093358567],
+                {
+}
+            ).addTo(feature_group_4beee8dec07b0d95883ec03fe4d33266);
+        
+    
+            var icon_2c72b84785d8e2f4d70e8fe078d79a76 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4b888bbb99f106c3ac3b5812d58d6658 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9ed494f03f60f08b5e7e023b5365f92c = $(`<div id="html_9ed494f03f60f08b5e7e023b5365f92c" style="width: 100.0%; height: 100.0%;">MQ La Carambole</div>`)[0];
+                popup_4b888bbb99f106c3ac3b5812d58d6658.setContent(html_9ed494f03f60f08b5e7e023b5365f92c);
+            
+        
+
+        marker_c56161952cbe3457be2c6a6c88849024.bindPopup(popup_4b888bbb99f106c3ac3b5812d58d6658)
+        ;
+
+        
+    
+    
+            marker_c56161952cbe3457be2c6a6c88849024.bindTooltip(
+                `<div>
+                     MQ La Carambole
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c56161952cbe3457be2c6a6c88849024.setIcon(icon_2c72b84785d8e2f4d70e8fe078d79a76);
+            
+    
+            var marker_9bd296b3b9ad0b31272a4c9fc2bb3544 = L.marker(
+                [46.20074238, 6.098188913],
+                {
+}
+            ).addTo(feature_group_4beee8dec07b0d95883ec03fe4d33266);
+        
+    
+            var icon_98d4c32f4fe076a123287f528aeaf4b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_73e8143c0b5cae69fae3de47dfb11d5a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6a75316740373921980949c6d1d6923 = $(`<div id="html_c6a75316740373921980949c6d1d6923" style="width: 100.0%; height: 100.0%;">MQ Aïre-Le Lignon</div>`)[0];
+                popup_73e8143c0b5cae69fae3de47dfb11d5a.setContent(html_c6a75316740373921980949c6d1d6923);
+            
+        
+
+        marker_9bd296b3b9ad0b31272a4c9fc2bb3544.bindPopup(popup_73e8143c0b5cae69fae3de47dfb11d5a)
+        ;
+
+        
+    
+    
+            marker_9bd296b3b9ad0b31272a4c9fc2bb3544.bindTooltip(
+                `<div>
+                     MQ Aïre-Le Lignon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9bd296b3b9ad0b31272a4c9fc2bb3544.setIcon(icon_98d4c32f4fe076a123287f528aeaf4b5);
+            
+    
+            var marker_9f79af507bcffa0ec1421a8629edd8da = L.marker(
+                [46.2045194, 6.093987963],
+                {
+}
+            ).addTo(feature_group_4beee8dec07b0d95883ec03fe4d33266);
+        
+    
+            var icon_18b0f03b31698c589b60d3232f5484d2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce1a00b780e03a614005b657f5687e0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_440812df553e70fd0c3494cbfea3be23 = $(`<div id="html_440812df553e70fd0c3494cbfea3be23" style="width: 100.0%; height: 100.0%;">Jardin Robinson du Lignon</div>`)[0];
+                popup_ce1a00b780e03a614005b657f5687e0b.setContent(html_440812df553e70fd0c3494cbfea3be23);
+            
+        
+
+        marker_9f79af507bcffa0ec1421a8629edd8da.bindPopup(popup_ce1a00b780e03a614005b657f5687e0b)
+        ;
+
+        
+    
+    
+            marker_9f79af507bcffa0ec1421a8629edd8da.bindTooltip(
+                `<div>
+                     Jardin Robinson du Lignon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9f79af507bcffa0ec1421a8629edd8da.setIcon(icon_18b0f03b31698c589b60d3232f5484d2);
+            
+    
+            var marker_19dd2bfcb2bb59d7251a94c773975d15 = L.marker(
+                [46.21582009, 6.079897625],
+                {
+}
+            ).addTo(feature_group_4beee8dec07b0d95883ec03fe4d33266);
+        
+    
+            var icon_f1cd7746a7190f24ac5165eda04edfbc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7b5dbbd69413704168b72f728e2719f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1657cd50f4d5bd4678afeceb3af5790a = $(`<div id="html_1657cd50f4d5bd4678afeceb3af5790a" style="width: 100.0%; height: 100.0%;">MQ Vernier Village</div>`)[0];
+                popup_7b5dbbd69413704168b72f728e2719f1.setContent(html_1657cd50f4d5bd4678afeceb3af5790a);
+            
+        
+
+        marker_19dd2bfcb2bb59d7251a94c773975d15.bindPopup(popup_7b5dbbd69413704168b72f728e2719f1)
+        ;
+
+        
+    
+    
+            marker_19dd2bfcb2bb59d7251a94c773975d15.bindTooltip(
+                `<div>
+                     MQ Vernier Village
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_19dd2bfcb2bb59d7251a94c773975d15.setIcon(icon_f1cd7746a7190f24ac5165eda04edfbc);
+            
+    
+            var marker_db43174624f83561c188793e8a917837 = L.marker(
+                [46.21566483, 6.099526076],
+                {
+}
+            ).addTo(feature_group_4beee8dec07b0d95883ec03fe4d33266);
+        
+    
+            var icon_ea216175d94d5dfa77e5ae89f411584b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f0088e892c08454dcf2613f546909915 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e22622cb04fc5cdb855ab94711f7e613 = $(`<div id="html_e22622cb04fc5cdb855ab94711f7e613" style="width: 100.0%; height: 100.0%;">Centre de rencontres ABARC</div>`)[0];
+                popup_f0088e892c08454dcf2613f546909915.setContent(html_e22622cb04fc5cdb855ab94711f7e613);
+            
+        
+
+        marker_db43174624f83561c188793e8a917837.bindPopup(popup_f0088e892c08454dcf2613f546909915)
+        ;
+
+        
+    
+    
+            marker_db43174624f83561c188793e8a917837.bindTooltip(
+                `<div>
+                     Centre de rencontres ABARC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_db43174624f83561c188793e8a917837.setIcon(icon_ea216175d94d5dfa77e5ae89f411584b);
+            
+    
+            var marker_c655dc2501b7af7d76c377383cac2ae1 = L.marker(
+                [46.2224041, 6.108681822],
+                {
+}
+            ).addTo(feature_group_4beee8dec07b0d95883ec03fe4d33266);
+        
+    
+            var icon_8fb8dcefb087e1692704125b961dd2ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6907ff6ef9b382bdc1fa13e3ad5e0f2b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d848bcf85d16e040250c5a4b80bb27b7 = $(`<div id="html_d848bcf85d16e040250c5a4b80bb27b7" style="width: 100.0%; height: 100.0%;">MQ des Avanchets</div>`)[0];
+                popup_6907ff6ef9b382bdc1fa13e3ad5e0f2b.setContent(html_d848bcf85d16e040250c5a4b80bb27b7);
+            
+        
+
+        marker_c655dc2501b7af7d76c377383cac2ae1.bindPopup(popup_6907ff6ef9b382bdc1fa13e3ad5e0f2b)
+        ;
+
+        
+    
+    
+            marker_c655dc2501b7af7d76c377383cac2ae1.bindTooltip(
+                `<div>
+                     MQ des Avanchets
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c655dc2501b7af7d76c377383cac2ae1.setIcon(icon_8fb8dcefb087e1692704125b961dd2ed);
+            
+    
+            var marker_05b4efeba576d4baef22bab24a43c57f = L.marker(
+                [46.21635795, 6.112196645],
+                {
+}
+            ).addTo(feature_group_4beee8dec07b0d95883ec03fe4d33266);
+        
+    
+            var icon_5212ed4483136a20c4e8e7628b428722 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3d524ce4cec0add9a39139cac42d6949 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4d907e8cff8a3f4c571d147fdc607c6 = $(`<div id="html_b4d907e8cff8a3f4c571d147fdc607c6" style="width: 100.0%; height: 100.0%;">MQJR Châbal</div>`)[0];
+                popup_3d524ce4cec0add9a39139cac42d6949.setContent(html_b4d907e8cff8a3f4c571d147fdc607c6);
+            
+        
+
+        marker_05b4efeba576d4baef22bab24a43c57f.bindPopup(popup_3d524ce4cec0add9a39139cac42d6949)
+        ;
+
+        
+    
+    
+            marker_05b4efeba576d4baef22bab24a43c57f.bindTooltip(
+                `<div>
+                     MQJR Châbal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_05b4efeba576d4baef22bab24a43c57f.setIcon(icon_5212ed4483136a20c4e8e7628b428722);
+            
+    
+            var marker_ec706664a69742e6af5f68fcf39a0586 = L.marker(
+                [46.21887794, 6.111005265],
+                {
+}
+            ).addTo(feature_group_4beee8dec07b0d95883ec03fe4d33266);
+        
+    
+            var icon_4941d1b873d4d09cc3adb56d22fe35ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_69684fc1a81163f9622abfc5ea9a9105 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73c51c62a55245aad241d12bfeb0e018 = $(`<div id="html_73c51c62a55245aad241d12bfeb0e018" style="width: 100.0%; height: 100.0%;">MJ de l'Eclipse</div>`)[0];
+                popup_69684fc1a81163f9622abfc5ea9a9105.setContent(html_73c51c62a55245aad241d12bfeb0e018);
+            
+        
+
+        marker_ec706664a69742e6af5f68fcf39a0586.bindPopup(popup_69684fc1a81163f9622abfc5ea9a9105)
+        ;
+
+        
+    
+    
+            marker_ec706664a69742e6af5f68fcf39a0586.bindTooltip(
+                `<div>
+                     MJ de l'Eclipse
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ec706664a69742e6af5f68fcf39a0586.setIcon(icon_4941d1b873d4d09cc3adb56d22fe35ee);
+            
+    
+            var marker_d486f011d8df433c82b4e1b5248acc7d = L.marker(
+                [46.2066577, 6.111294698],
+                {
+}
+            ).addTo(feature_group_4beee8dec07b0d95883ec03fe4d33266);
+        
+    
+            var icon_ead75c05aae2b60259af7742df46f056 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_18b925d343f4db567d6706d4161dd16b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ac9cd967cc2c4854774643b4d106b75f = $(`<div id="html_ac9cd967cc2c4854774643b4d106b75f" style="width: 100.0%; height: 100.0%;">MQ la Concorde</div>`)[0];
+                popup_18b925d343f4db567d6706d4161dd16b.setContent(html_ac9cd967cc2c4854774643b4d106b75f);
+            
+        
+
+        marker_d486f011d8df433c82b4e1b5248acc7d.bindPopup(popup_18b925d343f4db567d6706d4161dd16b)
+        ;
+
+        
+    
+    
+            marker_d486f011d8df433c82b4e1b5248acc7d.bindTooltip(
+                `<div>
+                     MQ la Concorde
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d486f011d8df433c82b4e1b5248acc7d.setIcon(icon_ead75c05aae2b60259af7742df46f056);
+            
+    
+            var marker_cb36e45d56d1a0a4a2cd76af6b403701 = L.marker(
+                [46.21700872, 6.106162262],
+                {
+}
+            ).addTo(feature_group_4beee8dec07b0d95883ec03fe4d33266);
+        
+    
+            var icon_5dc16b19c1bace499f14a973307e046b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5a5db9c68a411bf08c38e7051c0d6bba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be1908a4c6d7472cd7b68c04f90e43f3 = $(`<div id="html_be1908a4c6d7472cd7b68c04f90e43f3" style="width: 100.0%; height: 100.0%;">MQ de l'Etang</div>`)[0];
+                popup_5a5db9c68a411bf08c38e7051c0d6bba.setContent(html_be1908a4c6d7472cd7b68c04f90e43f3);
+            
+        
+
+        marker_cb36e45d56d1a0a4a2cd76af6b403701.bindPopup(popup_5a5db9c68a411bf08c38e7051c0d6bba)
+        ;
+
+        
+    
+    
+            marker_cb36e45d56d1a0a4a2cd76af6b403701.bindTooltip(
+                `<div>
+                     MQ de l'Etang
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cb36e45d56d1a0a4a2cd76af6b403701.setIcon(icon_5dc16b19c1bace499f14a973307e046b);
+            
+    
+            var marker_906843fe95747a859007f50edbf6aa99 = L.marker(
+                [46.21172447, 6.106929258],
+                {
+}
+            ).addTo(feature_group_4beee8dec07b0d95883ec03fe4d33266);
+        
+    
+            var icon_f91ca90f5522eafc376f2134d3e5b477 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9091f6d4622869953cfed03fd1e436c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f6ac3418ab59f94eb4c16423b0ee531 = $(`<div id="html_8f6ac3418ab59f94eb4c16423b0ee531" style="width: 100.0%; height: 100.0%;">Travailleurs Sociaux Hors Murs Vernier</div>`)[0];
+                popup_9091f6d4622869953cfed03fd1e436c2.setContent(html_8f6ac3418ab59f94eb4c16423b0ee531);
+            
+        
+
+        marker_906843fe95747a859007f50edbf6aa99.bindPopup(popup_9091f6d4622869953cfed03fd1e436c2)
+        ;
+
+        
+    
+    
+            marker_906843fe95747a859007f50edbf6aa99.bindTooltip(
+                `<div>
+                     Travailleurs Sociaux Hors Murs Vernier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_906843fe95747a859007f50edbf6aa99.setIcon(icon_f91ca90f5522eafc376f2134d3e5b477);
+            
+    
+            var marker_6d8133f99c41b548d3a3cfd05b00d5ec = L.marker(
+                [46.20447219, 6.095457058],
+                {
+}
+            ).addTo(feature_group_4beee8dec07b0d95883ec03fe4d33266);
+        
+    
+            var icon_95628b4bd363040aef19a639a26a65d9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a51b9b07a658eb15129c2c32c82978d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a5a015ff1de835cdea583ba5d5d9f3e = $(`<div id="html_2a5a015ff1de835cdea583ba5d5d9f3e" style="width: 100.0%; height: 100.0%;">Ludothèque d'Aïre-Le Lignon</div>`)[0];
+                popup_3a51b9b07a658eb15129c2c32c82978d.setContent(html_2a5a015ff1de835cdea583ba5d5d9f3e);
+            
+        
+
+        marker_6d8133f99c41b548d3a3cfd05b00d5ec.bindPopup(popup_3a51b9b07a658eb15129c2c32c82978d)
+        ;
+
+        
+    
+    
+            marker_6d8133f99c41b548d3a3cfd05b00d5ec.bindTooltip(
+                `<div>
+                     Ludothèque d'Aïre-Le Lignon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6d8133f99c41b548d3a3cfd05b00d5ec.setIcon(icon_95628b4bd363040aef19a639a26a65d9);
+            
+    
+            var marker_310db55bd3ed41dabe74234410561b46 = L.marker(
+                [46.2211634, 6.1097049],
+                {
+}
+            ).addTo(feature_group_4beee8dec07b0d95883ec03fe4d33266);
+        
+    
+            var icon_9c9681dae336faa426a0a117661cab6f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_68192c78e295cabf7ef7910fe4603750 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_39ed93eb13d8a8a3569ba9c02c628a1c = $(`<div id="html_39ed93eb13d8a8a3569ba9c02c628a1c" style="width: 100.0%; height: 100.0%;">Ludothèque des Avanchets</div>`)[0];
+                popup_68192c78e295cabf7ef7910fe4603750.setContent(html_39ed93eb13d8a8a3569ba9c02c628a1c);
+            
+        
+
+        marker_310db55bd3ed41dabe74234410561b46.bindPopup(popup_68192c78e295cabf7ef7910fe4603750)
+        ;
+
+        
+    
+    
+            marker_310db55bd3ed41dabe74234410561b46.bindTooltip(
+                `<div>
+                     Ludothèque des Avanchets
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_310db55bd3ed41dabe74234410561b46.setIcon(icon_9c9681dae336faa426a0a117661cab6f);
+            
+    
+            var marker_aeb20c48efb31b77ac7348be304da5ba = L.marker(
+                [46.21098515, 6.112831342],
+                {
+}
+            ).addTo(feature_group_4beee8dec07b0d95883ec03fe4d33266);
+        
+    
+            var icon_1f4fde04ce7dcd4319a597573898c7ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b77f9829f602a3434fcb877a42b81750 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d4bca09654589203bd235cdd51a9881f = $(`<div id="html_d4bca09654589203bd235cdd51a9881f" style="width: 100.0%; height: 100.0%;">Ludothèque de Châtelaine</div>`)[0];
+                popup_b77f9829f602a3434fcb877a42b81750.setContent(html_d4bca09654589203bd235cdd51a9881f);
+            
+        
+
+        marker_aeb20c48efb31b77ac7348be304da5ba.bindPopup(popup_b77f9829f602a3434fcb877a42b81750)
+        ;
+
+        
+    
+    
+            marker_aeb20c48efb31b77ac7348be304da5ba.bindTooltip(
+                `<div>
+                     Ludothèque de Châtelaine
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aeb20c48efb31b77ac7348be304da5ba.setIcon(icon_1f4fde04ce7dcd4319a597573898c7ce);
+            
+    
+            feature_group_4beee8dec07b0d95883ec03fe4d33266.addTo(map_429ed307de305a4bd1b6fe30df2934ee);
+        
+    
+            var feature_group_c658f52809447a55048d02c9f48dabf4 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_d4074b48479cb1f597d959f2c0c01c0e = L.marker(
+                [46.1973018577727, 6.0960430875513705],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_d5dee8f1aa9e6fe8c0916ab1aff6f5e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b501d2f6bc7ecf597c46229f05bfadda = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aceffce0f2dcb6214ef0387e5efd1096 = $(`<div id="html_aceffce0f2dcb6214ef0387e5efd1096" style="width: 100.0%; height: 100.0%;">CO RENARD</div>`)[0];
+                popup_b501d2f6bc7ecf597c46229f05bfadda.setContent(html_aceffce0f2dcb6214ef0387e5efd1096);
+            
+        
+
+        marker_d4074b48479cb1f597d959f2c0c01c0e.bindPopup(popup_b501d2f6bc7ecf597c46229f05bfadda)
+        ;
+
+        
+    
+    
+            marker_d4074b48479cb1f597d959f2c0c01c0e.bindTooltip(
+                `<div>
+                     CO RENARD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d4074b48479cb1f597d959f2c0c01c0e.setIcon(icon_d5dee8f1aa9e6fe8c0916ab1aff6f5e7);
+            
+    
+            var marker_213f3e0acc95fe2ec814dc1255c379d7 = L.marker(
+                [46.2012188767641, 6.10069937276154],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_bbe07c06138d1a729496f5d89051504a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6776c8f29b68c92b15e68d5add5fa01e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_05f03e60d7172a6df42eb352fd7e1c63 = $(`<div id="html_05f03e60d7172a6df42eb352fd7e1c63" style="width: 100.0%; height: 100.0%;">AIRE</div>`)[0];
+                popup_6776c8f29b68c92b15e68d5add5fa01e.setContent(html_05f03e60d7172a6df42eb352fd7e1c63);
+            
+        
+
+        marker_213f3e0acc95fe2ec814dc1255c379d7.bindPopup(popup_6776c8f29b68c92b15e68d5add5fa01e)
+        ;
+
+        
+    
+    
+            marker_213f3e0acc95fe2ec814dc1255c379d7.bindTooltip(
+                `<div>
+                     AIRE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_213f3e0acc95fe2ec814dc1255c379d7.setIcon(icon_bbe07c06138d1a729496f5d89051504a);
+            
+    
+            var marker_ecdafadcad364ce3f7ae5d92f0a03358 = L.marker(
+                [46.222375409289505, 6.1084121425448],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_283cff008fb5f4e850cbecaaa5b398c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_25379ea28fd30d93411b7b97bad30878 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e6a0d15b2fc49853b97d15113fe1d15e = $(`<div id="html_e6a0d15b2fc49853b97d15113fe1d15e" style="width: 100.0%; height: 100.0%;">AVANCHET-JURA</div>`)[0];
+                popup_25379ea28fd30d93411b7b97bad30878.setContent(html_e6a0d15b2fc49853b97d15113fe1d15e);
+            
+        
+
+        marker_ecdafadcad364ce3f7ae5d92f0a03358.bindPopup(popup_25379ea28fd30d93411b7b97bad30878)
+        ;
+
+        
+    
+    
+            marker_ecdafadcad364ce3f7ae5d92f0a03358.bindTooltip(
+                `<div>
+                     AVANCHET-JURA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ecdafadcad364ce3f7ae5d92f0a03358.setIcon(icon_283cff008fb5f4e850cbecaaa5b398c0);
+            
+    
+            var marker_f995561e13f5557aeecdaf2bb7e3b1d8 = L.marker(
+                [46.220178481015104, 6.110887281261681],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_28e2e9b62b3b2ce5fe0f700682bce1e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_479279f09ace0a09145539cdfd3aa047 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20bb69c8b84e96ceed1b6ab578ff305c = $(`<div id="html_20bb69c8b84e96ceed1b6ab578ff305c" style="width: 100.0%; height: 100.0%;">AVANCHET-SALEVE</div>`)[0];
+                popup_479279f09ace0a09145539cdfd3aa047.setContent(html_20bb69c8b84e96ceed1b6ab578ff305c);
+            
+        
+
+        marker_f995561e13f5557aeecdaf2bb7e3b1d8.bindPopup(popup_479279f09ace0a09145539cdfd3aa047)
+        ;
+
+        
+    
+    
+            marker_f995561e13f5557aeecdaf2bb7e3b1d8.bindTooltip(
+                `<div>
+                     AVANCHET-SALEVE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f995561e13f5557aeecdaf2bb7e3b1d8.setIcon(icon_28e2e9b62b3b2ce5fe0f700682bce1e1);
+            
+    
+            var marker_8864907c254cd8ae26163e44ce23501a = L.marker(
+                [46.216569955347005, 6.1102019199890405],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_55d56026d47ac0abed88c3d48bf4d65e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2a4f4326629bc5841f9d8b41e49b405f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_731ab9419d911b1dc9170b5b8b7eba36 = $(`<div id="html_731ab9419d911b1dc9170b5b8b7eba36" style="width: 100.0%; height: 100.0%;">BALEXERT</div>`)[0];
+                popup_2a4f4326629bc5841f9d8b41e49b405f.setContent(html_731ab9419d911b1dc9170b5b8b7eba36);
+            
+        
+
+        marker_8864907c254cd8ae26163e44ce23501a.bindPopup(popup_2a4f4326629bc5841f9d8b41e49b405f)
+        ;
+
+        
+    
+    
+            marker_8864907c254cd8ae26163e44ce23501a.bindTooltip(
+                `<div>
+                     BALEXERT
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8864907c254cd8ae26163e44ce23501a.setIcon(icon_55d56026d47ac0abed88c3d48bf4d65e);
+            
+    
+            var marker_62bf8cb0a9098bf875521f2b764ab778 = L.marker(
+                [46.212125129964, 6.11408740704767],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_9ef14c6d6aef9b8023d137e445e39917 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a2556abcf736b17c488e8d8c0105e27f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_97ed880d1c2785d6bffeac1df91a8f25 = $(`<div id="html_97ed880d1c2785d6bffeac1df91a8f25" style="width: 100.0%; height: 100.0%;">BOURQUIN</div>`)[0];
+                popup_a2556abcf736b17c488e8d8c0105e27f.setContent(html_97ed880d1c2785d6bffeac1df91a8f25);
+            
+        
+
+        marker_62bf8cb0a9098bf875521f2b764ab778.bindPopup(popup_a2556abcf736b17c488e8d8c0105e27f)
+        ;
+
+        
+    
+    
+            marker_62bf8cb0a9098bf875521f2b764ab778.bindTooltip(
+                `<div>
+                     BOURQUIN
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_62bf8cb0a9098bf875521f2b764ab778.setIcon(icon_9ef14c6d6aef9b8023d137e445e39917);
+            
+    
+            var marker_3611d32d76a67234b518ea5f5e3e0a84 = L.marker(
+                [46.2123466273347, 6.1128690298809305],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_f08bffe46535dfcd388fa8e907e8006c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7b7532305cbc202ef3d8422c278a5a7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_970816f9a4c6543961d1afd159421d75 = $(`<div id="html_970816f9a4c6543961d1afd159421d75" style="width: 100.0%; height: 100.0%;">CHATELAINE</div>`)[0];
+                popup_7b7532305cbc202ef3d8422c278a5a7f.setContent(html_970816f9a4c6543961d1afd159421d75);
+            
+        
+
+        marker_3611d32d76a67234b518ea5f5e3e0a84.bindPopup(popup_7b7532305cbc202ef3d8422c278a5a7f)
+        ;
+
+        
+    
+    
+            marker_3611d32d76a67234b518ea5f5e3e0a84.bindTooltip(
+                `<div>
+                     CHATELAINE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3611d32d76a67234b518ea5f5e3e0a84.setIcon(icon_f08bffe46535dfcd388fa8e907e8006c);
+            
+    
+            var marker_9aad8ced9bea978d5a3fed55b62d2bc6 = L.marker(
+                [46.220178481015104, 6.110887281261681],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_43fa3685d553f9fb28fcaa9f36c09a4f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f221d2a8340d95f829293a12f55f82ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cf0ecca13210074dbb5780e3c4a1981c = $(`<div id="html_cf0ecca13210074dbb5780e3c4a1981c" style="width: 100.0%; height: 100.0%;">CLI EP AVANCHETS</div>`)[0];
+                popup_f221d2a8340d95f829293a12f55f82ad.setContent(html_cf0ecca13210074dbb5780e3c4a1981c);
+            
+        
+
+        marker_9aad8ced9bea978d5a3fed55b62d2bc6.bindPopup(popup_f221d2a8340d95f829293a12f55f82ad)
+        ;
+
+        
+    
+    
+            marker_9aad8ced9bea978d5a3fed55b62d2bc6.bindTooltip(
+                `<div>
+                     CLI EP AVANCHETS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9aad8ced9bea978d5a3fed55b62d2bc6.setIcon(icon_43fa3685d553f9fb28fcaa9f36c09a4f);
+            
+    
+            var marker_5b41db9ecc3bbd47214961b536c573b9 = L.marker(
+                [46.216513216185504, 6.10976854070413],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_7e6e26c73ffc2fbabb2858a33c58cc04 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_587d1a25116ca0de9b17f8bd7eddb3e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1dd8621e8836ff5be22a70a83f1b8655 = $(`<div id="html_1dd8621e8836ff5be22a70a83f1b8655" style="width: 100.0%; height: 100.0%;">CLI EP BALEXERT</div>`)[0];
+                popup_587d1a25116ca0de9b17f8bd7eddb3e6.setContent(html_1dd8621e8836ff5be22a70a83f1b8655);
+            
+        
+
+        marker_5b41db9ecc3bbd47214961b536c573b9.bindPopup(popup_587d1a25116ca0de9b17f8bd7eddb3e6)
+        ;
+
+        
+    
+    
+            marker_5b41db9ecc3bbd47214961b536c573b9.bindTooltip(
+                `<div>
+                     CLI EP BALEXERT
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5b41db9ecc3bbd47214961b536c573b9.setIcon(icon_7e6e26c73ffc2fbabb2858a33c58cc04);
+            
+    
+            var marker_6ed21d3203d92d9ec1a43778fa4d12da = L.marker(
+                [46.204171989898505, 6.09318254311939],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_bbb6344bc302c1c266d1f666035f0844 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_41223b0ccd87b08e2ee471a7d5be5577 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f86c0369854457e754c943c0f1dde74 = $(`<div id="html_8f86c0369854457e754c943c0f1dde74" style="width: 100.0%; height: 100.0%;">CLI EP LIGNON</div>`)[0];
+                popup_41223b0ccd87b08e2ee471a7d5be5577.setContent(html_8f86c0369854457e754c943c0f1dde74);
+            
+        
+
+        marker_6ed21d3203d92d9ec1a43778fa4d12da.bindPopup(popup_41223b0ccd87b08e2ee471a7d5be5577)
+        ;
+
+        
+    
+    
+            marker_6ed21d3203d92d9ec1a43778fa4d12da.bindTooltip(
+                `<div>
+                     CLI EP LIGNON
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6ed21d3203d92d9ec1a43778fa4d12da.setIcon(icon_bbb6344bc302c1c266d1f666035f0844);
+            
+    
+            var marker_0ad3163852a602e8674e7d322dd0f75e = L.marker(
+                [46.2012188767641, 6.10069937276154],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_a0b569ee7ae4d52b19cd3d7ffe121330 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_96437973ef4a62c116846d341f35ccd5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1822735840660085e52f44e74a89171e = $(`<div id="html_1822735840660085e52f44e74a89171e" style="width: 100.0%; height: 100.0%;">ECPS AIRE</div>`)[0];
+                popup_96437973ef4a62c116846d341f35ccd5.setContent(html_1822735840660085e52f44e74a89171e);
+            
+        
+
+        marker_0ad3163852a602e8674e7d322dd0f75e.bindPopup(popup_96437973ef4a62c116846d341f35ccd5)
+        ;
+
+        
+    
+    
+            marker_0ad3163852a602e8674e7d322dd0f75e.bindTooltip(
+                `<div>
+                     ECPS AIRE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0ad3163852a602e8674e7d322dd0f75e.setIcon(icon_a0b569ee7ae4d52b19cd3d7ffe121330);
+            
+    
+            var marker_65ccd102802dd92c8d0dc992f66fcf07 = L.marker(
+                [46.212352605412, 6.10991948002572],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_6f6e18cde6064198aa992d5618676e13 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d42d0e948495626c10188d421b0042ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa33bfd9dbd3d8a6dc123f08c90fee06 = $(`<div id="html_aa33bfd9dbd3d8a6dc123f08c90fee06" style="width: 100.0%; height: 100.0%;">ECPS PAILLY</div>`)[0];
+                popup_d42d0e948495626c10188d421b0042ae.setContent(html_aa33bfd9dbd3d8a6dc123f08c90fee06);
+            
+        
+
+        marker_65ccd102802dd92c8d0dc992f66fcf07.bindPopup(popup_d42d0e948495626c10188d421b0042ae)
+        ;
+
+        
+    
+    
+            marker_65ccd102802dd92c8d0dc992f66fcf07.bindTooltip(
+                `<div>
+                     ECPS PAILLY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_65ccd102802dd92c8d0dc992f66fcf07.setIcon(icon_6f6e18cde6064198aa992d5618676e13);
+            
+    
+            var marker_3eef10b8bb77e40b49ffdcb6486fa52d = L.marker(
+                [46.2082221789051, 6.1111619382755],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_9cc9aca5917b68be6fa960e12b197be7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_976d31f8923dec0826cf91ed559cee2a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b155f2565fd09a04180f5b3f9d82ebc8 = $(`<div id="html_b155f2565fd09a04180f5b3f9d82ebc8" style="width: 100.0%; height: 100.0%;">EMILIE-DE-MORSIER</div>`)[0];
+                popup_976d31f8923dec0826cf91ed559cee2a.setContent(html_b155f2565fd09a04180f5b3f9d82ebc8);
+            
+        
+
+        marker_3eef10b8bb77e40b49ffdcb6486fa52d.bindPopup(popup_976d31f8923dec0826cf91ed559cee2a)
+        ;
+
+        
+    
+    
+            marker_3eef10b8bb77e40b49ffdcb6486fa52d.bindTooltip(
+                `<div>
+                     EMILIE-DE-MORSIER
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3eef10b8bb77e40b49ffdcb6486fa52d.setIcon(icon_9cc9aca5917b68be6fa960e12b197be7);
+            
+    
+            var marker_93340f6cd87c6e6e66fc53bcc346693b = L.marker(
+                [46.2177784431025, 6.10597529804504],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_2f2e9e0984005fe045edcd9861929fca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_82b838901b6ed0c4f74f0a170338f18f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b6e94a073432c1c1c5c936308426fb8 = $(`<div id="html_2b6e94a073432c1c1c5c936308426fb8" style="width: 100.0%; height: 100.0%;">ETANG</div>`)[0];
+                popup_82b838901b6ed0c4f74f0a170338f18f.setContent(html_2b6e94a073432c1c1c5c936308426fb8);
+            
+        
+
+        marker_93340f6cd87c6e6e66fc53bcc346693b.bindPopup(popup_82b838901b6ed0c4f74f0a170338f18f)
+        ;
+
+        
+    
+    
+            marker_93340f6cd87c6e6e66fc53bcc346693b.bindTooltip(
+                `<div>
+                     ETANG
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_93340f6cd87c6e6e66fc53bcc346693b.setIcon(icon_2f2e9e0984005fe045edcd9861929fca);
+            
+    
+            var marker_d479155f818ad6bec3dd994bcced3bd4 = L.marker(
+                [46.2069591516996, 6.10806218594428],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_d5503727da9a54e73b81eb0782fe065d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2651dfd0eb48379f1bc686a85d490d79 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_400ffd8b9b54a8ae7349734c7daa336d = $(`<div id="html_400ffd8b9b54a8ae7349734c7daa336d" style="width: 100.0%; height: 100.0%;">LIBELLULES</div>`)[0];
+                popup_2651dfd0eb48379f1bc686a85d490d79.setContent(html_400ffd8b9b54a8ae7349734c7daa336d);
+            
+        
+
+        marker_d479155f818ad6bec3dd994bcced3bd4.bindPopup(popup_2651dfd0eb48379f1bc686a85d490d79)
+        ;
+
+        
+    
+    
+            marker_d479155f818ad6bec3dd994bcced3bd4.bindTooltip(
+                `<div>
+                     LIBELLULES
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d479155f818ad6bec3dd994bcced3bd4.setIcon(icon_d5503727da9a54e73b81eb0782fe065d);
+            
+    
+            var marker_6841b5e5ecce187b723067f8c2c31610 = L.marker(
+                [46.2042147459763, 6.09362105245133],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_b2d29c17fdf68d93fa50844eb86d5faa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9184bb4cdfbe8bbbf35fc7623c8fa152 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab54090ed8c79c2f18a617c66696284b = $(`<div id="html_ab54090ed8c79c2f18a617c66696284b" style="width: 100.0%; height: 100.0%;">LIGNON CE</div>`)[0];
+                popup_9184bb4cdfbe8bbbf35fc7623c8fa152.setContent(html_ab54090ed8c79c2f18a617c66696284b);
+            
+        
+
+        marker_6841b5e5ecce187b723067f8c2c31610.bindPopup(popup_9184bb4cdfbe8bbbf35fc7623c8fa152)
+        ;
+
+        
+    
+    
+            marker_6841b5e5ecce187b723067f8c2c31610.bindTooltip(
+                `<div>
+                     LIGNON CE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6841b5e5ecce187b723067f8c2c31610.setIcon(icon_b2d29c17fdf68d93fa50844eb86d5faa);
+            
+    
+            var marker_660ab16b8b9a2e951eba771fae5931f1 = L.marker(
+                [46.2042097698911, 6.09347446695911],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_1adf0f04f0e938b04769e1d649ee6427 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_384006b71620eac1c6dcfb392e67a444 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66144677ddf929af744e315df8ad1f36 = $(`<div id="html_66144677ddf929af744e315df8ad1f36" style="width: 100.0%; height: 100.0%;">LIGNON CM</div>`)[0];
+                popup_384006b71620eac1c6dcfb392e67a444.setContent(html_66144677ddf929af744e315df8ad1f36);
+            
+        
+
+        marker_660ab16b8b9a2e951eba771fae5931f1.bindPopup(popup_384006b71620eac1c6dcfb392e67a444)
+        ;
+
+        
+    
+    
+            marker_660ab16b8b9a2e951eba771fae5931f1.bindTooltip(
+                `<div>
+                     LIGNON CM
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_660ab16b8b9a2e951eba771fae5931f1.setIcon(icon_1adf0f04f0e938b04769e1d649ee6427);
+            
+    
+            var marker_f77c8ad7cbd9e2740cca118d269bc927 = L.marker(
+                [46.2167456176398, 6.09189823526531],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_3d47bf9d8ae599e96debb9f4bb753e19 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5a92f14f5b49f6396718a4e9c84d135a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_09e52a7103894118e2ce9a5b1a46b5bc = $(`<div id="html_09e52a7103894118e2ce9a5b1a46b5bc" style="width: 100.0%; height: 100.0%;">POUSSY</div>`)[0];
+                popup_5a92f14f5b49f6396718a4e9c84d135a.setContent(html_09e52a7103894118e2ce9a5b1a46b5bc);
+            
+        
+
+        marker_f77c8ad7cbd9e2740cca118d269bc927.bindPopup(popup_5a92f14f5b49f6396718a4e9c84d135a)
+        ;
+
+        
+    
+    
+            marker_f77c8ad7cbd9e2740cca118d269bc927.bindTooltip(
+                `<div>
+                     POUSSY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f77c8ad7cbd9e2740cca118d269bc927.setIcon(icon_3d47bf9d8ae599e96debb9f4bb753e19);
+            
+    
+            var marker_b6c43b9827fcb55a35c6a17a6772e74d = L.marker(
+                [46.2169467363639, 6.08488133921968],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_1aad10e8d2854b4ad36e084e4a00b4e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bc14863b0ff63620316d89e7df12d841 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f09779731b41cf43849e3e544780fae = $(`<div id="html_7f09779731b41cf43849e3e544780fae" style="width: 100.0%; height: 100.0%;">RANCHES CE</div>`)[0];
+                popup_bc14863b0ff63620316d89e7df12d841.setContent(html_7f09779731b41cf43849e3e544780fae);
+            
+        
+
+        marker_b6c43b9827fcb55a35c6a17a6772e74d.bindPopup(popup_bc14863b0ff63620316d89e7df12d841)
+        ;
+
+        
+    
+    
+            marker_b6c43b9827fcb55a35c6a17a6772e74d.bindTooltip(
+                `<div>
+                     RANCHES CE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b6c43b9827fcb55a35c6a17a6772e74d.setIcon(icon_1aad10e8d2854b4ad36e084e4a00b4e5);
+            
+    
+            var marker_1ae904acdc30f41d5acbabcd0dd99d7a = L.marker(
+                [46.2169467363639, 6.08488133921968],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_6dc0d33d1241bb3e19431f1295318a2a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fae31eef035912846c68fa5e40240a12 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3785c07e708fba2e77ef6ec802e9ceaa = $(`<div id="html_3785c07e708fba2e77ef6ec802e9ceaa" style="width: 100.0%; height: 100.0%;">RANCHES CM</div>`)[0];
+                popup_fae31eef035912846c68fa5e40240a12.setContent(html_3785c07e708fba2e77ef6ec802e9ceaa);
+            
+        
+
+        marker_1ae904acdc30f41d5acbabcd0dd99d7a.bindPopup(popup_fae31eef035912846c68fa5e40240a12)
+        ;
+
+        
+    
+    
+            marker_1ae904acdc30f41d5acbabcd0dd99d7a.bindTooltip(
+                `<div>
+                     RANCHES CM
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1ae904acdc30f41d5acbabcd0dd99d7a.setIcon(icon_6dc0d33d1241bb3e19431f1295318a2a);
+            
+    
+            var marker_eb4bfbd8c2e670097f84e6efd80c8991 = L.marker(
+                [46.213761456247305, 6.08186227808911],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_067fadcd57a05c972aa7371aca25b60f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cdadc5133e8be376823cc7eb9da76eb7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_370561eee11c9411559c75d1a0251152 = $(`<div id="html_370561eee11c9411559c75d1a0251152" style="width: 100.0%; height: 100.0%;">RANCHES-VILLAGE CE</div>`)[0];
+                popup_cdadc5133e8be376823cc7eb9da76eb7.setContent(html_370561eee11c9411559c75d1a0251152);
+            
+        
+
+        marker_eb4bfbd8c2e670097f84e6efd80c8991.bindPopup(popup_cdadc5133e8be376823cc7eb9da76eb7)
+        ;
+
+        
+    
+    
+            marker_eb4bfbd8c2e670097f84e6efd80c8991.bindTooltip(
+                `<div>
+                     RANCHES-VILLAGE CE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eb4bfbd8c2e670097f84e6efd80c8991.setIcon(icon_067fadcd57a05c972aa7371aca25b60f);
+            
+    
+            var marker_c5bcb73edcc5db1de3ee83d3526b9f0b = L.marker(
+                [46.2170934536172, 6.08656752518033],
+                {
+}
+            ).addTo(feature_group_c658f52809447a55048d02c9f48dabf4);
+        
+    
+            var icon_814bcc6e34ef3dd6eb11e15755eb3494 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3748741476e193379637217d8dbad9e7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b5f3c8db44a203492e8f7609bbd1b275 = $(`<div id="html_b5f3c8db44a203492e8f7609bbd1b275" style="width: 100.0%; height: 100.0%;">VERNIER-PLACE</div>`)[0];
+                popup_3748741476e193379637217d8dbad9e7.setContent(html_b5f3c8db44a203492e8f7609bbd1b275);
+            
+        
+
+        marker_c5bcb73edcc5db1de3ee83d3526b9f0b.bindPopup(popup_3748741476e193379637217d8dbad9e7)
+        ;
+
+        
+    
+    
+            marker_c5bcb73edcc5db1de3ee83d3526b9f0b.bindTooltip(
+                `<div>
+                     VERNIER-PLACE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c5bcb73edcc5db1de3ee83d3526b9f0b.setIcon(icon_814bcc6e34ef3dd6eb11e15755eb3494);
+            
+    
+            feature_group_c658f52809447a55048d02c9f48dabf4.addTo(map_429ed307de305a4bd1b6fe30df2934ee);
+        
+    
+            var layer_control_97c3b0d2387a18266fcecf971c4b512f_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_15b4ad52b81b1e493e80d9420bb5ca5e,
+                },
+                overlays :  {
+                    "A\u00efre - Pont-Butin" : feature_group_2b259a58ca7a44a644d2af0dded52bff,
+                    "A\u00efre-Renard" : feature_group_cccb5e55df940191d0c04247151d3d1e,
+                    "Balexert - Crozet" : feature_group_326b4abad0f55e514c7c6b8e10c68d58,
+                    "Balexert - centre" : feature_group_992217421a0f8cdf40248a0b57d88cf8,
+                    "Bel-Ebat" : feature_group_83f7eeb7c2092e523ca7c33d98bb2972,
+                    "Bois-des-Fr\u00e8res" : feature_group_a7222dfeb8fbfce72d145af5dc200516,
+                    "Champs-Pr\u00e9vost" : feature_group_09559599d593c19738c44f6560074cfc,
+                    "Ch\u00e2telaine - Simonet" : feature_group_5c81e6da4d17f3b46313359e17f511a3,
+                    "Ch\u00e2telaine - village" : feature_group_ce362906185fed25f80662d113562ec9,
+                    "Etang - Philibert -de-Sauvage" : feature_group_821d82ec588da134c7a407caee0273d9,
+                    "Etang-des-Tritons" : feature_group_df4110c714488bcf76c06fa4f9c4b252,
+                    "Le Canada" : feature_group_38fad1a579eae4e7861e6b14d38caca8,
+                    "Le Lignon" : feature_group_a35c5fb42371671d70d8736fa05d6c07,
+                    "Les Avanchets" : feature_group_cc69c477ea0d834d543e3bed597d7fcf,
+                    "Les Vidollets" : feature_group_7077090168909bf7a95cde460518e1d1,
+                    "Libellules" : feature_group_77a859d3fa44dbbe598a369179d1f063,
+                    "Mouille-Galand" : feature_group_78d88fc741ae3f225772ccb7da6a817e,
+                    "Poussy - Champ-Claude" : feature_group_a8e743dc629aa80cb57396df204ca2b8,
+                    "Rte de Peney - Crotte-au-Loup" : feature_group_12c089d5f49c93416ca00cfc0f054e9d,
+                    "Usine \u00e0 Gaz" : feature_group_69e4536cb3732e10239c55ff61de47ee,
+                    "Vernier - Cointrin" : feature_group_824d295800600a64c0e38e44083f219c,
+                    "Vernier - village" : feature_group_2e19623c45e79f1dc99fd8a55f07396a,
+                    "Maisons de Quartier" : feature_group_4beee8dec07b0d95883ec03fe4d33266,
+                    "\u00c9coles" : feature_group_c658f52809447a55048d02c9f48dabf4,
+                },
+            };
+            let layer_control_97c3b0d2387a18266fcecf971c4b512f = L.control.layers(
+                layer_control_97c3b0d2387a18266fcecf971c4b512f_layers.base_layers,
+                layer_control_97c3b0d2387a18266fcecf971c4b512f_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_429ed307de305a4bd1b6fe30df2934ee);
+
+        
+</script>
+</html>
