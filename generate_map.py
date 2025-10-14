@@ -1,158 +1,151 @@
-import json
 import pandas as pd
-import random
+import json
 import folium
 from folium.features import DivIcon
-from folium import Element
+from folium.plugins import MarkerCluster
+import random
 
-# === FICHIERS D'ENTRÉE ===
-F_XLS_CENTRES = "Coordonées_écoles_mqs_addresses.xlsx"   # onglets: "centres", "écoles"
-F_XLS_TRANCHES = "enfants_par_tranche_soussecteur.xlsx"  # Sous-secteur, Tranche âge, Nombre enfants
-F_XLS_CENTROIDS = "final_subsector_data.xlsx"             # Sous-secteur, Latitude, Longitude
-F_GEOJSON_SS = "soussecteurs_4300.geojson"                # propriétés: NOM, NUMERO
+# === FICHIERS SOURCES ===
+centres_path = "Coordonées_écoles_mqs_addresses.xlsx"
+geojson_path = "soussecteurs_4300.geojson"
+assoc_path = "centres_soussecteurs.xlsx"
+ages_path = "enfants_par_tranche_soussecteur.xlsx"
 
-# === CHARGEMENT DES DONNÉES ===
-centres_df = pd.read_excel(F_XLS_CENTRES, sheet_name="centres")
-ecoles_df  = pd.read_excel(F_XLS_CENTRES, sheet_name="écoles")
-enfants_df = pd.read_excel(F_XLS_TRANCHES)
-coords_df  = pd.read_excel(F_XLS_CENTROIDS)
+# === CHARGER LES DONNÉES ===
+centres_df = pd.read_excel(centres_path, sheet_name="centres")
+ecoles_df = pd.read_excel(centres_path, sheet_name="écoles")
+geo = json.load(open(geojson_path, encoding="utf-8"))
+assoc_df = pd.read_excel(assoc_path, sheet_name="Association")
+ages_df = pd.read_excel(ages_path)
 
-# Fusion tranches + coordonnées
-df = pd.merge(enfants_df, coords_df, on="Sous-secteur", how="left")
+# === CRÉER LA CARTE ===
+m = folium.Map(location=[46.213, 6.084], zoom_start=13, tiles="cartodb positron")
 
-# Correction des suffixes de colonnes
-lat_col = [c for c in df.columns if "Latitude" in c][0]
-lon_col = [c for c in df.columns if "Longitude" in c][0]
+# === COUCHES INDÉPENDANTES ===
 
-# === CHARGER LES SOUS-SECTEURS GEOJSON ===
-with open(F_GEOJSON_SS, encoding="utf-8") as f:
-    geojson_data = json.load(f)
-
-def norm(s): return str(s).strip().lower()
-features_by_nom = {norm(feat["properties"]["NOM"]): feat for feat in geojson_data["features"]}
-
-# === CRÉATION DE LA CARTE ===
-m = folium.Map(location=[46.213, 6.084], zoom_start=13, tiles="cartodbpositron")
-
-# === COUCHES POUR LES STRUCTURES ===
-fg_mq = folium.FeatureGroup(name="Maisons de Quartier", show=True)
-fg_crmj = folium.FeatureGroup(name="CR / MJ", show=True)
-fg_ludo = folium.FeatureGroup(name="Ludothèques", show=True)
-fg_tshm = folium.FeatureGroup(name="TSHM", show=True)
+## ÉCOLES – décalage aléatoire pour éviter chevauchement
 fg_ecoles = folium.FeatureGroup(name="Écoles", show=True)
-
-# Fonction pour déterminer l’icône selon le type
-def icon_for_type(t):
-    t = str(t).strip().upper()
-    if t == "MQ":
-        return folium.Icon(color="green", icon="home", prefix="fa")
-    elif t in ("CR/MJ", "CRMJ", "CR-MJ"):
-        return folium.Icon(color="purple", icon="users", prefix="fa")
-    elif t in ("LUDOTHÈQUE", "LUDOTHEQUE", "LUDO"):
-        return folium.Icon(color="orange", icon="puzzle-piece", prefix="fa")
-    elif t == "TSHM":
-        return folium.Icon(color="red", icon="street-view", prefix="fa")
-    return folium.Icon(color="gray")
-
-# === AJOUT DES CENTRES ===
-for _, row in centres_df.iterrows():
-    nom = row["Nom"]
-    lat = float(row["Latitude"])
-    lon = float(row["Longitude"])
-    type_ = str(row["Type"]).strip().upper()
-
-    icn = icon_for_type(type_)
-    if type_ == "MQ":
-        fg = fg_mq
-    elif type_ in ("CR/MJ", "CRMJ", "CR-MJ"):
-        fg = fg_crmj
-    elif type_ in ("LUDOTHÈQUE", "LUDOTHEQUE", "LUDO"):
-        fg = fg_ludo
-    elif type_ == "TSHM":
-        fg = fg_tshm
-    else:
-        continue
-
-    folium.Marker(location=[lat, lon], tooltip=nom, popup=nom, icon=icn).add_to(fg)
-
-# === AJOUT DES ÉCOLES ===
 for _, r in ecoles_df.iterrows():
-    nom = r["Nom"]
-    # petit décalage aléatoire pour éviter la superposition
-    lat = float(r["Latitude"]) + random.uniform(0.0005, 0.0012)
-    lon = float(r["Longitude"]) + random.uniform(-0.0012, 0.0012)
+    lat = r["Latitude"] + random.uniform(0.0001, 0.002)
+    lon = r["Longitude"] + random.uniform(-0.001, 0.001)
     folium.Marker(
         location=[lat, lon],
-        tooltip=nom,
+        tooltip=r["Nom"],
         icon=folium.Icon(color="blue", icon="graduation-cap", prefix="fa")
     ).add_to(fg_ecoles)
+fg_ecoles.add_to(m)
 
-# Ajouter toutes les couches principales
-for fg in [fg_mq, fg_crmj, fg_ludo, fg_tshm, fg_ecoles]:
-    fg.add_to(m)
-
-# === COUCHES SOUS-SECTEURS (étiquettes + polygones liés) ===
-ordre_tranches = ["5-8", "9-12", "13-15", "16-18", "19-25"]
-grouped = df.groupby("Sous-secteur")
-
-for secteur, group in grouped:
-    group = group.copy()
-    group["Tranche âge"] = pd.Categorical(group["Tranche âge"], categories=ordre_tranches, ordered=True)
-    group = group.sort_values("Tranche âge")
-
-    lat = group[lat_col].iloc[0]
-    lon = group[lon_col].iloc[0]
-
-    texte = f"<b>{secteur}</b><br>"
-    for _, row in group.iterrows():
-        texte += f"{row['Tranche âge']} : {int(row['Nombre enfants'])}<br>"
-
-    fg = folium.FeatureGroup(name=secteur, show=False)
-
-    # Étiquette
+## LUDOTHÈQUES
+fg_ludo = folium.FeatureGroup(name="Ludothèques", show=True)
+ludos_df = centres_df[centres_df["Nom"].str.contains("Ludo", case=False, na=False)]
+for _, r in ludos_df.iterrows():
     folium.Marker(
-        location=[lat, lon],
-        icon=DivIcon(
-            icon_size=(120, 40),
-            icon_anchor=(0, 0),
-            html=f"""
-                <div style='
-                    background-color: white;
-                    border: 1px solid #999;
-                    border-radius: 6px;
-                    padding: 4px 6px;
-                    font-size: 10px;
-                    line-height: 1.2;
-                    box-shadow: 1px 1px 3px rgba(0,0,0,0.25);
-                '>{texte}</div>
-            """
-        )
-    ).add_to(fg)
+        location=[r["Latitude"], r["Longitude"]],
+        tooltip=r["Nom"],
+        icon=folium.Icon(color="orange", icon="puzzle-piece", prefix="fa")
+    ).add_to(fg_ludo)
+fg_ludo.add_to(m)
 
-    # Polygone (coloré + lié à la même case)
-    feat = features_by_nom.get(norm(secteur))
-    if feat:
-        folium.GeoJson(
-            data=feat,
-            style_function=lambda x: {
-                "fillColor": "#3B82F6",   # bleu clair
-                "color": "#1E40AF",       # contour
-                "weight": 2,
-                "fillOpacity": 0.45
-            },
-            highlight_function=lambda x: {
-                "weight": 3,
-                "color": "#0F766E",
-                "fillOpacity": 0.6
-            },
-            tooltip=secteur
+## TSHM – filtrage élargi
+fg_tshm = folium.FeatureGroup(name="TSHM", show=True)
+tshm_df = centres_df[centres_df["Nom"].str.contains("TSHM|Travailleurs", case=False, na=False)]
+for _, r in tshm_df.iterrows():
+    folium.Marker(
+        location=[r["Latitude"], r["Longitude"]],
+        tooltip=r["Nom"],
+        icon=folium.Icon(color="red", icon="users", prefix="fa")
+    ).add_to(fg_tshm)
+fg_tshm.add_to(m)
+
+# === PALETTE DE COULEURS UNIQUE PAR STRUCTURE ===
+palette = [
+    "#1E90FF", "#32CD32", "#FFD700", "#FF69B4", "#FF4500",
+    "#9ACD32", "#20B2AA", "#9370DB", "#FF8C00", "#00CED1", "#DC143C"
+]
+structures = assoc_df["Nom structure"].unique()
+color_map = {name: palette[i % len(palette)] for i, name in enumerate(structures)}
+
+# === COUCHES MQ / CR / MJ ET LEURS SOUS-SECTEURS ===
+assoc_df["Sous-secteur"] = assoc_df["Sous-secteur"].str.strip()
+ages_df["Sous-secteur"] = ages_df["Sous-secteur"].str.strip()
+
+for structure, group in assoc_df.groupby("Nom structure"):
+    fg = folium.FeatureGroup(name=structure, show=False)
+    couleur = color_map[structure]
+
+    # === Ajouter le marker du centre ===
+    centre_row = centres_df[centres_df["Nom"].str.strip() == structure.strip()]
+    if not centre_row.empty:
+        lat = float(centre_row["Latitude"].iloc[0])
+        lon = float(centre_row["Longitude"].iloc[0])
+        folium.Marker(
+            location=[lat, lon],
+            tooltip=structure,
+            icon=folium.Icon(color="gray", icon_color=couleur, icon="home", prefix="fa")
         ).add_to(fg)
 
+    # === Ajouter les polygones et fiches ===
+    for ss in group["Sous-secteur"]:
+        feature = next(
+            (f for f in geo["features"]
+             if f["properties"]["NOM"].strip().lower() == ss.strip().lower()),
+            None
+        )
+        if feature:
+            folium.GeoJson(
+                data=feature,
+                style_function=lambda x, col=couleur: {
+                    "fillColor": col,
+                    "color": col,
+                    "weight": 1.2,
+                    "fillOpacity": 0.35
+                },
+                tooltip=ss
+            ).add_to(fg)
+
+            # === Fiche de tranches d’âge ===
+            sub_ages = ages_df[ages_df["Sous-secteur"].str.lower() == ss.lower()]
+            if not sub_ages.empty:
+                texte = f"<b>{ss}</b><br>"
+                for _, row in sub_ages.iterrows():
+                    texte += f"{row['Tranche âge']}: {int(row['Nombre enfants'])}<br>"
+
+                coords_data = feature["geometry"]["coordinates"]
+                if feature["geometry"]["type"] == "MultiPolygon":
+                    coords = coords_data[0][0]
+                else:
+                    coords = coords_data[0]
+
+                if isinstance(coords[0], (list, tuple)) and len(coords[0]) == 2:
+                    lon_avg = sum(p[0] for p in coords) / len(coords)
+                    lat_avg = sum(p[1] for p in coords) / len(coords)
+                else:
+                    lon_avg, lat_avg = 0, 0
+
+                folium.Marker(
+                    location=[lat_avg, lon_avg],
+                    icon=DivIcon(
+                        icon_size=(120, 40),
+                        icon_anchor=(0, 0),
+                        html=f"""
+                            <div style='
+                                background-color: white;
+                                border: 1px solid #999;
+                                border-radius: 6px;
+                                padding: 4px;
+                                font-size: 10px;
+                                line-height: 1.2;
+                                box-shadow: 1px 1px 3px rgba(0,0,0,0.25);
+                                color: #111;
+                            '>{texte}</div>
+                        """
+                    )
+                ).add_to(fg)
+
     fg.add_to(m)
 
-# === CONTRÔLE DES COUCHES ===
+# === MENU ET SAUVEGARDE ===
 folium.LayerControl(collapsed=True).add_to(m)
-
-# === EXPORT ===
 m.save("index.html")
+
 print("✅ Carte générée : index.html")
